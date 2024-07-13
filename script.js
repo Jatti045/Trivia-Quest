@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const restartBtn = document.getElementById("restart-btn");
   const score = document.getElementById("score");
 
-  const url = "https://opentdb.com/api.php?amount=10&category=19";
+  const url = "https://opentdb.com/api.php?amount=10";
 
   // State variables
   let currentQuestionIndex = 0;
