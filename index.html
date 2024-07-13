@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia Quest</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="welcome-screen">
+        <h1>Trivia Quest</h1>
+        <p>Embark on a journey through knowledge!</p>
+        <button id="start-btn" class="btn">Start Adventure</button>
+      </div>
+
+      <div id="quiz-container" class="hide">
+        <h2>Trivia Quest</h2>
+        <div class="quiz-header">
+          <p id="question-counter">Question 1 of 10</p>
+          <p id="score">Score: 0</p>
+        </div>
+        <div id="question-container">
+          <p id="question-text">Question text goes here</p>
+        </div>
+        <div id="answer-buttons" class="btn-grid">
+          <button class="btn answer-btn">Answer 1</button>
+          <button class="btn answer-btn">Answer 2</button>
+          <button class="btn answer-btn">Answer 3</button>
+          <button class="btn answer-btn">Answer 4</button>
+        </div>
+        <button id="next-btn" class="btn next-btn hide">Next Question</button>
+      </div>
+      <div id="end-screen" class="hide">
+        <h2>Quiz Completed!</h2>
+        <p id="final-score">
+          Your final score: <span id="score-value">0</span> out of 10
+        </p>
+        <div id="end-buttons">
+          <button id="restart-btn" class="btn">Restart Quiz</button>
+          <button id="home-btn" class="btn">Return to Home</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
