@@ -43,9 +43,19 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       btn.style.backgroundColor = "#5753e2";
       btn.style.color = "white";
-      const selectedAnswer = btn.textContent;
 
-      if (selectedAnswer === answers[currentQuestionIndex].answers[0]) {
+      const selectedAnswer = btn.textContent;
+      const correctAnswer = answers[currentQuestionIndex].answers[0];
+
+      answerBtns.forEach((btn) => {
+        if (btn.textContent === correctAnswer) {
+          btn.style.backgroundColor = "#45a049";
+          btn.style.color = "white";
+          btn.style.borderColor = "#45a049";
+        }
+      });
+
+      if (selectedAnswer === correctAnswer) {
         scoreTracker++;
         score.textContent = `Score: ${scoreTracker}`;
       }
@@ -67,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     answerBtns.forEach((btn) => {
       btn.style.backgroundColor = "white";
       btn.style.color = "black";
+      btn.style.borderColor = "none";
     });
     currentQuestionIndex++;
     setQuestion();
@@ -75,6 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.disabled = false;
       btn.style.backgroundColor = "white";
       btn.style.color = "black";
+      btn.style.borderColor = "#5753e2";
     });
     nextBtn.classList.add("hide");
     nextBtn.textContent = "Next Question";
@@ -147,6 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     answerBtns.forEach((btn) => {
       btn.style.backgroundColor = "white";
       btn.style.color = "black";
+      btn.style.borderColor = "#5753e2";
     });
     quizContainer.classList.add("hide");
     endScreen.classList.remove("hide");
