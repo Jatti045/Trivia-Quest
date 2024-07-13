@@ -201,6 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
     score.textContent = "Score: 0";
     questionCounter.textContent = "Question 1 of 10";
     nextBtn.textContent = "Next Question";
+    startBtn.textContent = "START ADVENTURE";
     nextBtn.classList.add("hide");
     answerBtns.forEach((btn) => (btn.disabled = false));
   }
