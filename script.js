@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const restartBtn = document.getElementById("restart-btn");
   const score = document.getElementById("score");
 
-  const url = "https://opentdb.com/api.php?amount=10";
-
   // State variables
   let currentQuestionIndex = 0;
   let scoreTracker = 0;
@@ -23,6 +21,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Event listener for the start button
   startBtn.addEventListener("click", async () => {
+    const selectedCategory = document.querySelector(
+      'input[name="category"]:checked'
+    );
+
+    if (!selectedCategory) {
+      alert("Please select a category!");
+      return;
+    }
+
+    startBtn.textContent = "Loading...";
+
+    const categoryId = selectedCategory.value;
+
+    const url = `https://opentdb.com/api.php?amount=10&category=${categoryId}`;
+
     const data = await fetchAPI(url);
 
     questions = fetchQuestions(data);

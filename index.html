@@ -15,6 +15,43 @@
       <div id="welcome-screen">
         <h1>Trivia Quest</h1>
         <p>Embark on a journey through knowledge!</p>
+        <div id="category-selection">
+          <h3>Select Categorie:</h3>
+          <div class="category-option">
+            <span>General Knowledge</span>
+            <label class="switch">
+              <input
+                type="radio"
+                id="general-knowledge"
+                name="category"
+                value="9"
+                checked
+              />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="category-option">
+            <span>Mathematics</span>
+            <label class="switch">
+              <input type="radio" id="mathematics" name="category" value="19" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="category-option">
+            <span>Geography</span>
+            <label class="switch">
+              <input type="radio" id="geography" name="category" value="22" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="category-option">
+            <span>History</span>
+            <label class="switch">
+              <input type="radio" id="history" name="category" value="23" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
         <button id="start-btn" class="btn">Start Adventure</button>
       </div>
 
