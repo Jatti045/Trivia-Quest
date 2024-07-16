@@ -234,18 +234,9 @@ h2 {
   gap: 20px;
 }
 
-#restart-btn,
 #home-btn {
   padding: 12px 24px;
   font-size: 1em;
-}
-
-#restart-btn {
-  background-color: var(--secondary-color);
-}
-
-#restart-btn:hover {
-  background-color: #45a049;
 }
 
 #home-btn {

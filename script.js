@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const endScreen = document.getElementById("end-screen");
   const finalScore = document.getElementById("final-score");
   const homeBtn = document.getElementById("home-btn");
-  const restartBtn = document.getElementById("restart-btn");
   const score = document.getElementById("score");
 
   // State variables
@@ -60,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const selectedAnswer = btn.textContent;
       const correctAnswer = answers[currentQuestionIndex].answers[0];
 
+      console.log(correctAnswer);
       answerBtns.forEach((btn) => {
         if (btn.textContent === correctAnswer) {
           btn.style.backgroundColor = "#45a049";
@@ -185,13 +185,6 @@ document.addEventListener("DOMContentLoaded", () => {
     resetQuiz();
     endScreen.classList.add("hide");
     welcomeScreen.classList.remove("hide");
-  });
-
-  // Restart the quiz from the beginning
-  restartBtn.addEventListener("click", () => {
-    resetQuiz();
-    endScreen.classList.add("hide");
-    quizContainer.classList.remove("hide");
   });
 
   // Reset quiz state
