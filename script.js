@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const selectedAnswer = btn.textContent;
       const correctAnswer = answers[currentQuestionIndex].answers[0];
 
-      console.log(correctAnswer);
       answerBtns.forEach((btn) => {
         if (btn.textContent === correctAnswer) {
           btn.style.backgroundColor = "#45a049";
